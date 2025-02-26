@@ -28,14 +28,14 @@ let myFont;
 function setup() {
     let canvas = createCanvas(645, 350);
 
-    let skiingEmulator = createDiv();
-    skiingEmulator.id("ski-emulator");
+    let desertEmulator = createDiv();
+    desertEmulator.id("desert-emulator");
 
     let tvContainer = createDiv();
     tvContainer.id("tv-container"); 
 
-    let skiingText= createDiv("The Desert...");
-    skiingText.id("ski-text");
+    let desertText= createDiv("The Desert...");
+    desertText.id("desert-text");
 
     let restartButtons = createDiv();
     restartButtons.id("restart-buttons");
@@ -55,10 +55,10 @@ function setup() {
     pauseButton.id('pause');
 
     let body = select('body');
-    body.child(skiingEmulator);
-    skiingEmulator.child(tvContainer);
-    skiingEmulator.child(skiingText);
-    skiingEmulator.child(buttonContainer);
+    body.child(desertEmulator);
+    desertEmulator.child(tvContainer);
+    desertEmulator.child(desertText);
+    desertEmulator.child(buttonContainer);
 
     tvContainer.child(canvas);
     buttonContainer.child(restartButtons);
@@ -79,11 +79,11 @@ function setup() {
 // end of https://p5js.org/tutorials/animating-with-media-objects/ remix//
 
 // remixed from https://p5js.org/tutorials/responding-to-inputs/ to style elements and call the button functions//
-    skiingEmulator.style("background-color", "red");
-    skiingEmulator.style("border", "10px solid #FF474C");
-    skiingEmulator.style("border-radius", "10px");
-    skiingEmulator.style("padding", "20px");
-    skiingEmulator.style("box-shadow", "0 0 30px rgb(255, 255, 255))");
+    desertEmulator.style("background-color", "red");
+    desertEmulator.style("border", "10px solid #FF474C");
+    desertEmulator.style("border-radius", "10px");
+    desertEmulator.style("padding", "20px");
+    desertEmulator.style("box-shadow", "0 0 30px rgb(255, 255, 255))");
 
     buttonContainer.style("display", "flex");
     buttonContainer.style("align-items", "center");
@@ -97,13 +97,13 @@ function setup() {
     actionButtons.style("display", "flex");
     actionButtons.style("align-items", "center");
 
-    skiingText.style("margin", "10px 145px");
-    skiingText.style("font-size", "25px");
-    skiingText.style("color", "black");
-    skiingText.style("background-color", "white");
-    skiingText.style("padding", "5px");
-    skiingText.style("border-radius", "5px");
-    skiingText.style("text-align", "center");
+    desertText.style("margin", "10px 145px");
+    desertText.style("font-size", "25px");
+    desertText.style("color", "black");
+    desertText.style("background-color", "white");
+    desertText.style("padding", "5px");
+    desertText.style("border-radius", "5px");
+    desertText.style("text-align", "center");
 
     pauseButton.style('background-color', 'white');
     pauseButton.style('color', 'black');
