@@ -45,7 +45,7 @@ function showStartScreen(){
 
 
     fill('aquamarine');
-    rect(width/2, 360, 200, 50, 15);
+    rect(600, 360, 200, 50, 15);
 
     textFont(myFont);
     textSize(40);
