@@ -65,13 +65,13 @@ function showInputScreen(){
     text('Draw a Random Name', width/2, height/9);
 
     fill('blue');
-    rect(100, 100, 400, 450, 10);
+    rect(width / 6, height / 4, width / 3.5, 450, 10);
 
     fill('white');
-    rect(120, 120, 360, 100, 10);
+    rect(width / 6 + 14, height / 3.7, 360, 100, 10);
 
     fill(0);
-    text('INSERT NAMES', 300, 185);
+    text('INSERT NAMES', width / 3.22, height / 2.7);
 
     if (textList.length >= 6) {
         input.attribute('disabled', 'true');
@@ -79,11 +79,11 @@ function showInputScreen(){
         textFont(myFont);
         textSize(30);
         fill('red');
-        text("Submission Limit", 300, 280);
+        text("Submission Limit", width / 3.3, height /2.05);
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(120, 450);
+        submitButton.position(width / 6 + 14, height / 1.23);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
@@ -95,7 +95,7 @@ function showInputScreen(){
     }
     if (!drawButton) {
         drawButton = createButton('Draw Names');
-        drawButton.position(620, 450);
+        drawButton.position(width / 2, height / 1.23);
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
@@ -107,7 +107,7 @@ function showInputScreen(){
     }
     if (!input && textList.length < 6) {
         input = createInput();
-        input.position( 120, 240);
+        input.position( width / 6 + 14, height /2.3);
         input.changed(newText);
 
         input.style('font-family', 'Glitch');
@@ -117,12 +117,12 @@ function showInputScreen(){
         input.style('text-align', 'center');
         input.style('border-radius', '10px');
     }
-    let yPosition = 150; 
+    let yPosition = height / 2.7; 
     for (let i = 0; i < textList.length; i++) {
         textFont(myFont);
         textSize(40);
         fill('aquamarine');
-        text(textList[i], 800, yPosition);
+        text(textList[i], width / 1.6, yPosition);
         yPosition += 50; 
     }
 }   
