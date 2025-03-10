@@ -84,7 +84,7 @@ function showInputScreen(){
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(width / 6 + 14, height / 1.36);
+        submitButton.position(width / 6 + 14, height / 1.35);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
@@ -96,7 +96,7 @@ function showInputScreen(){
     }
     if (!drawButton) {
         drawButton = createButton('Draw Names');
-        drawButton.position(width / 2, height / 1.38);
+        drawButton.position(width / 2, height / 1.35);
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
