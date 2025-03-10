@@ -12,7 +12,7 @@ let firework;
 let isFullscreen = false;
 
 function setup(){
-    createCanvas(1300, 700);
+    createCanvas(600, 400);
 
     myFont = loadFont('Glitch.ttf');
     firework = loadImage('firework.gif');
@@ -63,57 +63,58 @@ function showInputScreen(){
     textSize(60);
     textAlign(CENTER);
     fill('blue');
-    text('Draw a Random Name', width/2, height/9);
+    text('Draw a Random Name', width/2, height/6);
 
     fill('blue');
-    rect(width / 5, height / 4, width / 3.5, 450, 10);
+    rect(width / 8, height / 4, width / 2.5, 250, 10);
 
     fill('white');
-    rect(width / 4.5, height / 3.5, width / 4, 100, 10);
+    rect(width / 7, height / 3.5, width / 2.75, 60, 10);
 
+    textSize(40);
     fill(0);
-    text('INSERT NAMES', width / 2.9, height / 2.6);
+    text('INSERT NAMES ', width / 3, height / 2.6);
 
     if (textList.length >= 6) {
         input.attribute('disabled', 'true');
         submitButton.attribute('disabled', 'true');
         textFont(myFont);
-        textSize(30);
+        textSize(20);
         fill('red');
         text("Submission Limit", width / 2.9, height /2);
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(width / 5 + 20, height / 1.26);
+        submitButton.position(width / 7, height / 1.35);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
-        submitButton.style('padding', '10px 130px');
-        submitButton.style('font-size', '30px');
+        submitButton.style('padding', '10px 85px');
+        submitButton.style('font-size', '20px');
         submitButton.style('color', 'black');
         submitButton.style('background-color', 'aquamarine');
         submitButton.style('border-radius', '10px');
     }
     if (!drawButton) {
         drawButton = createButton('Draw Names');
-        drawButton.position(width / 2, height / 1.26);
+        drawButton.position(width / 1.8, height / 1.35);
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
-        drawButton.style('padding', '10px 115px');
-        drawButton.style('font-size', '30px');
+        drawButton.style('padding', '10px 60px');
+        drawButton.style('font-size', '20px');
         drawButton.style('color', 'black');
         drawButton.style('background-color', 'aquamarine');
         drawButton.style('border-radius', '10px');
     }
     if (!input && textList.length < 6) {
         input = createInput();
-        input.position( width / 5 + 25, height /2.25);
+        input.position( width / 7, height /2.25);
         input.changed(newText);
 
         input.style('font-family', 'Glitch');
-        input.style('padding', '10px 8px');
-        input.style('font-size', '35px'); 
+        input.style('padding', '10px 20px');
+        input.style('font-size', '20px'); 
         input.style('color', 'blue');
         input.style('text-align', 'center');
         input.style('border-radius', '10px');
@@ -121,10 +122,10 @@ function showInputScreen(){
     let yPosition = height / 2.7; 
     for (let i = 0; i < textList.length; i++) {
         textFont(myFont);
-        textSize(40);
+        textSize(20);
         fill('aquamarine');
-        text(textList[i], width / 1.6, yPosition);
-        yPosition += 50; 
+        text(textList[i], width / 1.4, yPosition);
+        yPosition += 25; 
     }
 }   
 
