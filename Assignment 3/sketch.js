@@ -45,14 +45,14 @@ function showStartScreen(){
 
 
     fill('aquamarine');
-    rect(350, 360, 200, 50, 15);
+    rect(450, 360, 200, 50, 15);
 
     textFont(myFont);
     textSize(40);
     fill(0);
     text("START", width/2, 395);
 
-    if(mouseX >= 350 && mouseX <= 600 && mouseY >= 340 && mouseY <= 410 && mouseIsPressed == true){
+    if(mouseX >= 450 && mouseX <= 600 && mouseY >= 340 && mouseY <= 410 && mouseIsPressed == true){
         stage = 1;
     }
 }
