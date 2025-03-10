@@ -35,24 +35,24 @@ function showStartScreen(){
     textSize(60);
     textAlign(CENTER);
     fill('blue');
-    text('Draw a Random Name', width/2, 150);
+    text('Draw a Random Name', width/2, height/4);
 
     textFont(myFont);
     textSize(30);
     textAlign(CENTER);
     fill('aquamarine');
-    text('By Stella Rossi', width/2, 220);
+    text('By Stella Rossi', width / 2, height / 4 + 70);
 
 
     fill('aquamarine');
-    rect(450, 360, 200, 50, 15);
+    rect(width / 2 - 100, height / 1.5, 200, 50, 15);
 
     textFont(myFont);
     textSize(40);
     fill(0);
-    text("START", width/2, 395);
+    text("START", width / 2, height / 1.5 + 35);
 
-    if(mouseX >= 450 && mouseX <= 600 && mouseY >= 340 && mouseY <= 410 && mouseIsPressed == true){
+    if(mouseX >= width / 2 - 100 && mouseX <= width / 2 + 100 && mouseY >= height / 1.5 && mouseY <= height / 1.5 + 50 && mouseIsPressed == true){
         stage = 1;
     }
 }
@@ -62,7 +62,7 @@ function showInputScreen(){
     textSize(60);
     textAlign(CENTER);
     fill('blue');
-    text('Draw a Random Name', width/2, 60);
+    text('Draw a Random Name', width/2, height/9);
 
     fill('blue');
     rect(100, 100, 400, 450, 10);
@@ -152,7 +152,7 @@ function showDrawScreen(){
     textSize(60);
     textAlign(CENTER);
     fill('blue');
-    text('Draw a Random Name', width/2, 60);
+    text('Draw a Random Name', width/2, height/9);
 
     textFont(myFont);
     textSize(80);
