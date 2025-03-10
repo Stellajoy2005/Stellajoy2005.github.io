@@ -66,10 +66,10 @@ function showInputScreen(){
     text('Draw a Random Name', width/2, height/9);
 
     fill('blue');
-    rect(width / 6, height / 4, width / 3.5, 450, 10);
+    rect(width / 7, height / 4, width / 3.5, 450, 10);
 
     fill('white');
-    rect(width / 6 + 20, height / 3.7, width / 3.82, 100, 10);
+    rect(width / 7 + 20, height / 3.7, width / 3.82, 100, 10);
 
     fill(0);
     text('INSERT NAMES', width / 3.22, height / 2.8);
@@ -84,7 +84,7 @@ function showInputScreen(){
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(width / 6 + 20, height / 1.35);
+        submitButton.position(width / 7 + 20, height / 1.35);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
@@ -108,7 +108,7 @@ function showInputScreen(){
     }
     if (!input && textList.length < 6) {
         input = createInput();
-        input.position( width / 6 + 20, height /2.3);
+        input.position( width / 7 + 20, height /2.3);
         input.changed(newText);
 
         input.style('font-family', 'Glitch');
