@@ -69,7 +69,7 @@ function showInputScreen(){
     rect(width / 5, height / 4, width / 3.5, 450, 10);
 
     fill('white');
-    rect(width / 5 + 20, height / 3.7, width / 3.82, 100, 10);
+    rect(width / 4.5, height / 3.5, width / 4, 100, 10);
 
     fill(0);
     text('INSERT NAMES', width / 2.9, height / 2.7);
