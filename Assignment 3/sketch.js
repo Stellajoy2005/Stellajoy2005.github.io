@@ -71,7 +71,7 @@ function showInputScreen(){
     rect(width / 6 + 14, height / 3.7, 360, 100, 10);
 
     fill(0);
-    text('INSERT NAMES', width / 3.22, height / 2.7);
+    text('INSERT NAMES', width / 3.22, height / 2.8);
 
     if (textList.length >= 6) {
         input.attribute('disabled', 'true');
@@ -83,7 +83,7 @@ function showInputScreen(){
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(width / 6 + 14, height / 1.23);
+        submitButton.position(width / 6 + 14, height / 1.36);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
@@ -95,7 +95,7 @@ function showInputScreen(){
     }
     if (!drawButton) {
         drawButton = createButton('Draw Names');
-        drawButton.position(width / 2, height / 1.23);
+        drawButton.position(width / 2, height / 1.36);
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
