@@ -9,6 +9,7 @@ let finaldrawButton;
 let restartButton;
 let drawnName = "";
 let firework;
+let isFullscreen = false;
 
 function setup(){
     createCanvas(windowWidth, windowHeight);
@@ -65,10 +66,10 @@ function showInputScreen(){
     text('Draw a Random Name', width/2, height/9);
 
     fill('blue');
-    rect(width / 8, height / 4, width / 3.5, 450, 10);
+    rect(width / 6, height / 4, width / 3.5, 450, 10);
 
     fill('white');
-    rect(width / 8 + 14, height / 3.7, 360, 100, 10);
+    rect(width / 6 + 14, height / 3.7, 360, 100, 10);
 
     fill(0);
     text('INSERT NAMES', width / 3.22, height / 2.8);
@@ -83,7 +84,7 @@ function showInputScreen(){
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(width / 8 + 14, height / 1.36);
+        submitButton.position(width / 6 + 14, height / 1.36);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
@@ -95,7 +96,7 @@ function showInputScreen(){
     }
     if (!drawButton) {
         drawButton = createButton('Draw Names');
-        drawButton.position(width / 2, height / 1.36);
+        drawButton.position(width / 2, height / 1.38);
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
@@ -107,7 +108,7 @@ function showInputScreen(){
     }
     if (!input && textList.length < 6) {
         input = createInput();
-        input.position( width / 8 + 14, height /2.3);
+        input.position( width / 6 + 14, height /2.3);
         input.changed(newText);
 
         input.style('font-family', 'Glitch');
