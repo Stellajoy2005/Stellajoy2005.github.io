@@ -66,13 +66,13 @@ function showInputScreen(){
     text('Draw a Random Name', width/2, height/9);
 
     fill('blue');
-    rect(width / 7, height / 4, width / 3.5, 450, 10);
+    rect(width / 5, height / 4, width / 3.5, 450, 10);
 
     fill('white');
-    rect(width / 7 + 20, height / 3.7, width / 3.82, 100, 10);
+    rect(width / 5 + 20, height / 3.7, width / 3.82, 100, 10);
 
     fill(0);
-    text('INSERT NAMES', width / 3.22, height / 2.8);
+    text('INSERT NAMES', width / 2.9, height / 2.7);
 
     if (textList.length >= 6) {
         input.attribute('disabled', 'true');
@@ -80,15 +80,15 @@ function showInputScreen(){
         textFont(myFont);
         textSize(30);
         fill('red');
-        text("Submission Limit", width / 3.3, height /2.05);
+        text("Submission Limit", width / 2.9, height /2.05);
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
-        submitButton.position(width / 7 + 20, height / 1.35);
+        submitButton.position(width / 5 + 20, height / 1.26);
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
-        submitButton.style('padding', '10px 145px');
+        submitButton.style('padding', '10px 158px');
         submitButton.style('font-size', '30px');
         submitButton.style('color', 'black');
         submitButton.style('background-color', 'aquamarine');
@@ -96,11 +96,11 @@ function showInputScreen(){
     }
     if (!drawButton) {
         drawButton = createButton('Draw Names');
-        drawButton.position(width / 2, height / 1.35);
+        drawButton.position(width / 2, height / 1.26);
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
-        drawButton.style('padding', '10px 115px');
+        drawButton.style('padding', '10px 140px');
         drawButton.style('font-size', '30px');
         drawButton.style('color', 'black');
         drawButton.style('background-color', 'aquamarine');
@@ -108,11 +108,11 @@ function showInputScreen(){
     }
     if (!input && textList.length < 6) {
         input = createInput();
-        input.position( width / 7 + 20, height /2.3);
+        input.position( width / 5 + 20, height /2.3);
         input.changed(newText);
 
         input.style('font-family', 'Glitch');
-        input.style('padding', '10px');
+        input.style('padding', '10px 25px');
         input.style('font-size', '37.8px'); 
         input.style('color', 'blue');
         input.style('text-align', 'center');
