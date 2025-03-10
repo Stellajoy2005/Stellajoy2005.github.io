@@ -81,7 +81,7 @@ function showInputScreen(){
         textFont(myFont);
         textSize(20);
         fill('red');
-        text("Submission Limit", width / 2.9, height /2);
+        text("Submission Limit", width / 3.05, height /1.98);
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
@@ -148,27 +148,27 @@ function drawNames(){
 }
 
 function showDrawScreen(){
-    image(firework, 110, 110);
+    image(firework, width / 600, height / 8);
 
     textFont(myFont);
-    textSize(60);
+    textSize(40);
     textAlign(CENTER);
     fill('blue');
-    text('Draw a Random Name', width/2, height/9);
+    text('Draw a Random Name', width/2, height/6);
 
     textFont(myFont);
-    textSize(80);
+    textSize(40);
     fill('aquamarine');
-    text(drawnName, 300, 310);
+    text(drawnName, width / 3.6, height /1.7);
 
     if (!finaldrawButton) {
         finaldrawButton = createButton('Draw Again');
-        finaldrawButton.position(620, 250);
+        finaldrawButton.position(width / 1.8, height / 1.65);
         finaldrawButton.mousePressed(drawNames);
 
         finaldrawButton.style('font-family', 'Glitch');
-        finaldrawButton.style('padding', '10px 120px');
-        finaldrawButton.style('font-size', '30px');
+        finaldrawButton.style('padding', '10px 58px');
+        finaldrawButton.style('font-size', '20px');
         finaldrawButton.style('color', 'black');
         finaldrawButton.style('background-color', 'aquamarine');
         finaldrawButton.style('border-radius', '10px');
@@ -177,12 +177,12 @@ function showDrawScreen(){
 
     if (!restartButton && stage === 2) {
         restartButton = createButton('Restart');
-        restartButton.position(620, 330);
+        restartButton.position(width / 1.8, height / 1.35);
         restartButton.mousePressed(restart);
 
         restartButton.style('font-family', 'Glitch');
-        restartButton.style('padding', '10px 138px');
-        restartButton.style('font-size', '30px');
+        restartButton.style('padding', '10px 70px');
+        restartButton.style('font-size', '20px');
         restartButton.style('color', 'black');
         restartButton.style('background-color', 'aquamarine');
         restartButton.style('border-radius', '10px');
