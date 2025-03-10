@@ -12,7 +12,7 @@ let firework;
 let isFullscreen = false;
 
 function setup(){
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(1300, 700);
 
     myFont = loadFont('Glitch.ttf');
     firework = loadImage('firework.gif');
@@ -72,7 +72,7 @@ function showInputScreen(){
     rect(width / 4.5, height / 3.5, width / 4, 100, 10);
 
     fill(0);
-    text('INSERT NAMES', width / 2.9, height / 2.7);
+    text('INSERT NAMES', width / 2.9, height / 2.6);
 
     if (textList.length >= 6) {
         input.attribute('disabled', 'true');
@@ -80,7 +80,7 @@ function showInputScreen(){
         textFont(myFont);
         textSize(30);
         fill('red');
-        text("Submission Limit", width / 2.9, height /2.05);
+        text("Submission Limit", width / 2.9, height /2);
 
     }if (!submitButton && textList.length < 6){
         submitButton = createButton('Submit');
@@ -88,7 +88,7 @@ function showInputScreen(){
         submitButton.mousePressed(newText);
 
         submitButton.style('font-family', 'Glitch');
-        submitButton.style('padding', '10px 158px');
+        submitButton.style('padding', '10px 130px');
         submitButton.style('font-size', '30px');
         submitButton.style('color', 'black');
         submitButton.style('background-color', 'aquamarine');
@@ -100,7 +100,7 @@ function showInputScreen(){
         drawButton.mousePressed(drawNames);
 
         drawButton.style('font-family', 'Glitch');
-        drawButton.style('padding', '10px 140px');
+        drawButton.style('padding', '10px 115px');
         drawButton.style('font-size', '30px');
         drawButton.style('color', 'black');
         drawButton.style('background-color', 'aquamarine');
@@ -108,12 +108,12 @@ function showInputScreen(){
     }
     if (!input && textList.length < 6) {
         input = createInput();
-        input.position( width / 5 + 20, height /2.3);
+        input.position( width / 5 + 25, height /2.25);
         input.changed(newText);
 
         input.style('font-family', 'Glitch');
-        input.style('padding', '10px 25px');
-        input.style('font-size', '37.8px'); 
+        input.style('padding', '10px 8px');
+        input.style('font-size', '35px'); 
         input.style('color', 'blue');
         input.style('text-align', 'center');
         input.style('border-radius', '10px');
